@@ -2,12 +2,12 @@ import { useState } from "react";
 import { X } from "lucide-react";
 
 const GALLERY_IMAGES = [
-  "https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80",
-  "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600&q=80",
-  "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=600&q=80",
-  "https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600&q=80",
-  "https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80",
-  "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80",
+  "/image1.jpeg",
+  "/image7.jpeg",
+  "/image5.jpeg",
+  "/image3.jpeg",
+  "/image4.jpeg",
+  "/image2.jpeg",
 ];
 
 const PhotoGallery = ({ visible }: { visible: boolean }) => {
@@ -21,10 +21,9 @@ const PhotoGallery = ({ visible }: { visible: boolean }) => {
         className="max-w-lg mx-auto text-center animate-fade-up"
         style={{ animationDelay: "3.8s", opacity: 0 }}
       >
-        <h2 className="font-display text-4xl text-gold-gradient mb-8">
+        <h2 className="font-display text-4xl text-gold-gradient mb-8 leading-[1.3] py-2">
           Gallery
         </h2>
-
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
           {GALLERY_IMAGES.map((src, i) => (
             <button

@@ -4,9 +4,9 @@ import { X } from "lucide-react";
 const GALLERY_IMAGES = [
   "/image1.jpeg",
   "/image7.jpeg",
-  "/image5.jpeg",
+  "/image8.jpeg",
   "/image3.jpeg",
-  "/image4.jpeg",
+  "/image9.jpeg",
   "/image2.jpeg",
 ];
 

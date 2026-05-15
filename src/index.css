@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -123,12 +122,8 @@
       transform: translateY(-10vh) translateX(0) rotate(0deg);
       opacity: 0;
     }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
     100% {
       transform: translateY(110vh) translateX(100px) rotate(720deg);
       opacity: 0;
@@ -136,61 +131,38 @@
   }
 
   @keyframes gentle-pulse {
-    0%, 100% {
-      opacity: 0.6;
-    }
-    50% {
-      opacity: 1;
-    }
+    0%, 100% { opacity: 0.6; }
+    50%       { opacity: 1;   }
   }
 
   @keyframes shimmer {
-    0% {
-      background-position: -200% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
   }
 
   @keyframes fade-up {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0);    }
   }
 
   @keyframes soft-glow {
-    0%, 100% {
-      text-shadow: 0 0 10px hsla(43, 72%, 55%, 0.3);
-    }
-    50% {
-      text-shadow: 0 0 20px hsla(43, 72%, 55%, 0.6), 0 0 40px hsla(43, 72%, 55%, 0.2);
-    }
+    0%, 100% { text-shadow: 0 0 10px hsla(43, 72%, 55%, 0.3); }
+    50%       { text-shadow: 0 0 20px hsla(43, 72%, 55%, 0.6), 0 0 40px hsla(43, 72%, 55%, 0.2); }
   }
 
-  .animate-float-petal {
-    animation: float-petal linear infinite;
-  }
+  .animate-float-petal  { animation: float-petal linear infinite; }
+  .animate-gentle-pulse { animation: gentle-pulse 3s ease-in-out infinite; }
+  .animate-shimmer      { background-size: 200% auto; animation: shimmer 3s linear infinite; }
+  .animate-fade-up      { animation: fade-up 1s ease-out forwards; }
+  .animate-soft-glow    { animation: soft-glow 3s ease-in-out infinite; }
+}
 
-  .animate-gentle-pulse {
-    animation: gentle-pulse 3s ease-in-out infinite;
-  }
+@keyframes scrollDot {
+  0%   { transform: translateY(0);    opacity: 0; }
+  30%  { opacity: 1; }
+  100% { transform: translateY(20px); opacity: 0; }
+}
 
-  .animate-shimmer {
-    background-size: 200% auto;
-    animation: shimmer 3s linear infinite;
-  }
-
-  .animate-fade-up {
-    animation: fade-up 1s ease-out forwards;
-  }
-
-  .animate-soft-glow {
-    animation: soft-glow 3s ease-in-out infinite;
-  }
+.animate-scroll-dot {
+  animation: scrollDot 1.8s infinite;
 }
